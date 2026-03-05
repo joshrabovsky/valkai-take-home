@@ -62,12 +62,26 @@ Any model supported by LangChain's [`init_chat_model`](https://docs.langchain.co
 
 ```
 take-home/
-├── pyproject.toml          # uv project config, dependencies
-├── .env.example            # API key template
+├── pyproject.toml              # uv project config, dependencies
+├── .env.example                # API key template
+├── WRITEUP.md                  # Approach, findings, and trade-off analysis
 ├── src/
 │   └── agent/
-│       ├── core.py         # Agent factory (create_deep_agent wrapper)
-│       └── cli.py          # Interactive chat REPL (entry point)
+│       ├── core.py             # Agent factory (make_agent wrapper)
+│       ├── cli.py              # Interactive chat REPL (entry point)
+│       └── memory/
+│           ├── base.py         # BaseMemoryAgent abstract class
+│           ├── buffer.py       # Full history in a list
+│           ├── summary.py      # Summarizes history after N messages
+│           ├── summary_buffer.py # Summary + keeps last N raw messages
+│           ├── vector.py       # FAISS semantic similarity retrieval
+│           ├── store.py        # LangGraph InMemoryStore key-value facts
+│           └── checkpoint.py   # LangGraph MemorySaver checkpointer
 └── evals/
-    └── test_agent.py       # Barebones pytest evals
+    ├── README.md               # Harness usage instructions
+    ├── harness.py              # Runs all agents through scripted conversation
+    ├── harness_setup.py        # 21-turn test script with expected keywords
+    ├── judge_agent.py          # LLM judge for keyword recall scoring
+    ├── test_agent.py           # Pytest integration tests
+    └── results/                # Saved harness run outputs
 ```
