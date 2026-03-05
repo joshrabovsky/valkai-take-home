@@ -6,6 +6,11 @@ Barebones CLI chat agent built on [LangChain Deep Agents](https://github.com/lan
 
 [Watch on Google Drive](https://drive.google.com/file/d/1ieXRKmwwrfsaFWhlsvGYSO0FtJihw4qf/view?usp=sharing)
 
+## Submission Links
+
+- [Write-up — approach, findings, and trade-offs](./WRITEUP.md)
+- [Eval script — scripted conversation with context-dependent questions](./evals/harness_setup.py)
+
 ## Prerequisites
 
 - Python 3.13+
