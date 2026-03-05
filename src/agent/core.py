@@ -1,3 +1,5 @@
+from langgraph.store.base import BaseStore
+from langgraph.types import Checkpointer
 from langchain.chat_models import init_chat_model
 from deepagents import create_deep_agent
 
@@ -5,6 +7,8 @@ from deepagents import create_deep_agent
 def make_agent(
     model_str: str = "anthropic:claude-haiku-4-5-20251001",
     system_prompt: str | None = None,
+    checkpointer: Checkpointer | None = None,
+    store: BaseStore | None = None,
 ):
     """Create a deep agent with the specified model provider.
 
@@ -21,4 +25,8 @@ def make_agent(
     kwargs = {}
     if system_prompt:
         kwargs["system_prompt"] = system_prompt
+    if checkpointer:
+        kwargs["checkpointer"] = checkpointer
+    if store:
+        kwargs["store"] = store
     return create_deep_agent(model=model, **kwargs)
