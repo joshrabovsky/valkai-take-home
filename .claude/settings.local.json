@@ -18,7 +18,16 @@
       "Bash(git rebase:*)",
       "Bash(uv init:*)",
       "Bash(uv sync:*)",
-      "Bash(uv run python:*)"
+      "Bash(uv run python:*)",
+      "Bash(uv run:*)",
+      "Bash(gh pr:*)",
+      "Bash(gh api:*)",
+      "Bash(git:*)",
+      "Bash(grep:*)",
+      "WebFetch(domain:python.langchain.com)",
+      "WebFetch(domain:langchain-ai.github.io)",
+      "WebFetch(domain:docs.smith.langchain.com)",
+      "Bash(PYTHONPATH=/Users/joshrabovsky/Projects/Interviewing/valkai/take-home/evals uv run:*)"
     ]
   }
 }
