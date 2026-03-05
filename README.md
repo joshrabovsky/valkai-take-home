@@ -2,6 +2,10 @@
 
 Barebones CLI chat agent built on [LangChain Deep Agents](https://github.com/langchain-ai/deepagents). Supports OpenAI, Anthropic, and Google models out of the box. Designed as a minimal starting point to build on.
 
+## Video Walkthrough
+
+[Watch on Google Drive](https://drive.google.com/file/d/1ieXRKmwwrfsaFWhlsvGYSO0FtJihw4qf/view?usp=sharing)
+
 ## Prerequisites
 
 - Python 3.13+
